@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlue"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Complaint Form"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Tenant Name -->
+        <TextView style="@style/TenantLabel" android:text="Tenant Name *" android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/etTenantName"
+            style="@style/TenantInput"
+            android:hint="Enter tenant name"
+            android:inputType="textPersonName"/>
+
+        <!-- Tenant Mobile -->
+        <TextView style="@style/TenantLabel" android:text="Tenant Mobile Number *" android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/etTenantMobile"
+            style="@style/TenantInput"
+            android:hint="Enter mobile number"
+            android:inputType="phone"
+            android:maxLength="10"/>
+
+        <!-- Property -->
+        <TextView style="@style/TenantLabel" android:text="Property Name / ID *" android:textColor="@color/black"/>
+        <Spinner
+            android:id="@+id/spProperty"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_tenant_input"
+            android:paddingHorizontal="12dp"
+            android:entries="@array/property_list"/>
+
+        <!-- Room -->
+        <TextView style="@style/TenantLabel" android:text="Room / Flat Number *" android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/etRoomNumber"
+            style="@style/TenantInput"
+            android:hint="Enter room or flat number"
+            android:inputType="text"/>
+
+        <!-- Category -->
+        <TextView style="@style/TenantLabel" android:text="Complaint Category *" android:textColor="@color/black"/>
+        <Spinner
+            android:id="@+id/spComplaintCategory"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_tenant_input"
+            android:paddingHorizontal="12dp"
+            android:entries="@array/complaint_categories"/>
+
+        <!-- Title -->
+        <TextView style="@style/TenantLabel" android:text="Complaint Title *" android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/etComplaintTitle"
+            style="@style/TenantInput"
+            android:hint="Enter complaint title"
+            android:inputType="textCapSentences"/>
+
+        <!-- Description -->
+        <TextView style="@style/TenantLabel" android:text="Complaint Description *" android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/etComplaintDescription"
+            style="@style/TenantInput"
+            android:layout_height="120dp"
+            android:gravity="top|start"
+            android:hint="Describe your problem"
+            android:inputType="textMultiLine"
+            android:minLines="4"/>
+
+        <!-- Date -->
+        <TextView style="@style/TenantLabel" android:text="Complaint Date *" android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/etComplaintDate"
+            style="@style/TenantInput"
+            android:hint="Select complaint date"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="none"/>
+
+        <!-- Upload -->
+        <TextView style="@style/TenantLabel" android:text="Upload Photo / Video" android:textColor="@color/black"/>
+        <Button
+            android:id="@+id/btnUploadMedia"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Choose Photo / Video"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#292929"/>
+
+        <TextView
+            android:id="@+id/tvSelectedMedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No file selected"
+            android:textColor="@color/black"
+            android:paddingTop="6dp"/>
+
+        <!-- Location -->
+        <TextView style="@style/TenantLabel" android:text="Location" android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/etComplaintLocation"
+            style="@style/TenantInput"
+            android:hint="Enter property address or location"
+            android:inputType="textPostalAddress"/>
+
+        <!-- Priority -->
+        <TextView style="@style/TenantLabel" android:text="Priority *" android:textColor="@color/black"/>
+        <Spinner
+            android:id="@+id/spPriority"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_tenant_input"
+            android:paddingHorizontal="12dp"
+            android:entries="@array/complaint_priorities"/>
+
+        <!-- Submit -->
+        <Button
+            android:id="@+id/btnSubmitComplaint"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="SUBMIT COMPLAINT"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#2878FF"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlue"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tenant Details"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            style="@style/TenantLabel"
+            android:text="Full Name"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etFullName"
+            style="@style/TenantInput"
+            android:hint="Enter full name"
+            android:inputType="textPersonName" />
+
+        <TextView
+            style="@style/TenantLabel"
+            android:text="Mobile Number"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etMobile"
+            style="@style/TenantInput"
+            android:hint="Enter 10-digit mobile number"
+            android:inputType="phone"
+            android:maxLength="10" />
+
+        <TextView
+            style="@style/TenantLabel"
+            android:textColor="@color/black"
+            android:text="Second Mobile Number" />
+
+        <EditText
+            android:id="@+id/etSecondMobile"
+            style="@style/TenantInput"
+            android:hint="Enter second mobile number"
+            android:inputType="phone"
+            android:maxLength="10" />
+
+        <TextView
+            style="@style/TenantLabel"
+            android:textColor="@color/black"
+            android:text="Temporary Address" />
+
+        <EditText
+            android:id="@+id/etTemporaryAddress"
+            style="@style/TenantInput"
+            android:layout_height="90dp"
+            android:gravity="top"
+            android:hint="Enter temporary address"
+            android:inputType="textPostalAddress"
+            android:minLines="2" />
+
+        <TextView
+            style="@style/TenantLabel"
+            android:textColor="@color/black"
+            android:text="Permanent Address" />
+
+        <EditText
+            android:id="@+id/etPermanentAddress"
+            style="@style/TenantInput"
+            android:layout_height="90dp"
+            android:gravity="top"
+            android:hint="Enter permanent address"
+            android:inputType="textPostalAddress"
+            android:minLines="2" />
+
+        <TextView
+            style="@style/TenantLabel"
+            android:textColor="@color/black"
+            android:text="Email ID" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/TenantInput"
+            android:hint="Enter email address"
+            android:inputType="textEmailAddress" />
+
+        <!-- Rental Start Date -->
+        <TextView
+            style="@style/TenantLabel"
+            android:textColor="@color/black"
+            android:text="Rental Start Date" />
+
+        <EditText
+            android:id="@+id/etRentalStartDate"
+            style="@style/TenantInput"
+            android:hint="📅 Select start date"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:inputType="none"
+            android:contentDescription="Select rental start date" />
+
+        <!-- Rental End Date -->
+        <TextView
+            style="@style/TenantLabel"
+            android:textColor="@color/black"
+            android:text="Rental End Date" />
+
+        <EditText
+            android:id="@+id/etRentalEndDate"
+            style="@style/TenantInput"
+            android:hint="📅 Select end date"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:inputType="none"
+            android:contentDescription="Select rental end date" />
+
+        <TextView
+            style="@style/TenantLabel"
+            android:textColor="@color/black"
+            android:text="Document Verification" />
+
+        <Spinner
+            android:id="@+id/spDocumentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_tenant_input"
+            android:paddingHorizontal="12dp"
+            android:popupBackground="#202020"
+            android:entries="@array/document_statuses" />
+
+        <TextView
+            style="@style/TenantLabel"
+            android:textColor="@color/black"
+            android:text="Deposit Fees (₹)" />
+
+        <EditText
+            android:id="@+id/etDepositFees"
+            style="@style/TenantInput"
+            android:hint="Enter deposit amount"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/btnSaveTenant"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#2878FF"
+            android:text="SAVE TENANT"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnClearTenant"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#333333"
+            android:text="CLEAR FORM"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

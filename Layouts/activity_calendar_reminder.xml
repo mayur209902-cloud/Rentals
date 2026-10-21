@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F7FA">
+
+    <!-- Scrollable Calendar Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Page Heading -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rental Calendar"
+                android:textColor="#17324D"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Track your rental period and rent payment"
+                android:textColor="#64748B"
+                android:textSize="15sp" />
+
+            <!-- Start Date Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Rental Start Date"
+                android:textColor="#17324D"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Auto-filled Start Date -->
+            <Button
+                android:id="@+id/btnStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="Loading start date..."
+                android:textAllCaps="false"
+                android:textColor="#17324D"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp" />
+
+            <!-- End Date Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Rental End / Rent Due Date"
+                android:textColor="#17324D"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Auto-filled End Date -->
+            <Button
+                android:id="@+id/btnEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="Loading end date..."
+                android:textAllCaps="false"
+                android:textColor="#17324D"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp" />
+
+            <!-- Countdown Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="25dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DAYS REMAINING"
+                    android:textColor="#64748B"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDaysRemaining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="--"
+                    android:textColor="#1769AA"
+                    android:textSize="54sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvReminderStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="Loading rental information..."
+                    android:textColor="#475569"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- Reminder Information -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:background="#E0EDFF">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rent Payment Reminders"
+                    android:textColor="#17324D"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="You will receive reminders on the final 3 days: 2 days before the due date, 1 day before, and on the due date."
+                    android:textColor="#334155"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+
+            <!-- Set Reminders Button -->
+            <Button
+                android:id="@+id/btnSetRentReminders"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#1769AA"
+                android:text="Set Rent Reminders"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Fixed Bottom Navigation -->
+    <include
+        layout="@layout/bottom_navigation" />
+
+</LinearLayout>

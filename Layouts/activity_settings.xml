@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F7FA">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#172B4D" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:text="Manage your rental account"
+                android:textSize="14sp"
+                android:textColor="#68778D" />
+
+            <!-- Account -->
+            <TextView
+                android:id="@+id/btnAccountSettings"
+                style="@style/RentalSettingItem"
+                android:text="👤   My Account                         ›"
+                android:contentDescription="Open my account" />
+
+            <!-- Notifications -->
+            <LinearLayout
+                style="@style/RentalSettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Notifications"
+                        android:textColor="#172B4D"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Payment and complaint updates"
+                        android:textColor="#68778D"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/switchNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:contentDescription="Enable notifications" />
+            </LinearLayout>
+
+            <!-- Rent Reminder -->
+            <LinearLayout
+                style="@style/RentalSettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rent Reminders"
+                        android:textColor="#172B4D"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Reminders before rent due date"
+                        android:textColor="#68778D"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/switchRentReminders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:contentDescription="Enable rent reminders" />
+            </LinearLayout>
+
+            <!-- Privacy -->
+            <TextView
+                android:id="@+id/btnPrivacySecurity"
+                style="@style/RentalSettingItem"
+                android:text="🔒   Privacy &amp; Security            ›" />
+
+            <!-- Help -->
+            <TextView
+                android:id="@+id/btnHelpSupport"
+                style="@style/RentalSettingItem"
+                android:text="❓   Help &amp; Support                    ›" />
+
+            <!-- About -->
+            <TextView
+                android:id="@+id/btnAboutApp"
+                style="@style/RentalSettingItem"
+                android:text="ℹ️   About Rentals                       ›" />
+
+            <!-- Logout -->
+            <TextView
+                android:id="@+id/btnLogout"
+                style="@style/RentalSettingItem"
+                android:text="↪   Logout"
+                android:textColor="#D32F2F" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Rentals App • Version 1.0"
+                android:textColor="#8A94A6"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_navigation" />
+
+</LinearLayout>
