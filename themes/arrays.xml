@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="document_statuses">
+        <item>Pending</item>
+        <item>Verified</item>
+        <item>Rejected</item>
+    </string-array>
+
+    <string-array name="property_list">
+        <item>Select Property</item>
+        <item>Property 1</item>
+        <item>Property 2</item>
+        <item>Property 3</item>
+    </string-array>
+
+    <string-array name="complaint_categories">
+        <item>Select Category</item>
+        <item>Plumbing</item>
+        <item>Electrical</item>
+        <item>Cleaning</item>
+        <item>Maintenance</item>
+        <item>Water Supply</item>
+        <item>Noise</item>
+        <item>Security</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="complaint_priorities">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Emergency</item>
+    </string-array>
+</resources>

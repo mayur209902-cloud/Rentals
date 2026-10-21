@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Rentals</string>
+    <string name="features_header">1. App ke pages aur features</string>
+    <string name="feature_home_dashboard_title">Home Dashboard</string>
+    <string name="feature_home_dashboard_subtitle">Next rent due, rent amount, rental status aur quick links.</string>
+    <string name="feature_rental_details_title">Rental Details</string>
+    <string name="feature_rental_details_subtitle">Property address, monthly rent, agreement start/end dates.</string>
+    <string name="feature_payments_history_title">Payments &amp; History</string>
+    <string name="feature_payments_history_subtitle">Rent payment records, paid/pending status aur receipts.</string>
+    <string name="feature_calendar_reminders_title">Calendar &amp; Reminders</string>
+    <string name="feature_calendar_reminders_subtitle">Rent due dates, agreement expiry aur mobile notifications.</string>
+    <string name="feature_profile_settings_title">My Profile, Location &amp; Settings</string>
+    <string name="feature_profile_settings_subtitle">Tenant profile, property location, notification preferences.</string>
+</resources>
